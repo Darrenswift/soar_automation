@@ -28,7 +28,7 @@ pip install requests
 # --- Configuration ---
 api_key = "YOUR_API_KEY_HERE" # Your SOAR AppKey
 soar_hostname = "your-instance.siemplify-soar.com" # Your SOAR hostname (without https://)
-case_name_match = "SecOps Connector Health" # The exact string to search for in case titles
+case_name_match = "SecOps Connector" # The exact string to search for in case titles
 
 python3 bulk_close_soar_cases.py
 
