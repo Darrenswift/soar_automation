@@ -11,6 +11,10 @@ This script is optimized for handling a large number of cases and network instab
 * **Explicit Timeouts:** Prevents the script from hanging indefinitely if the SOAR server becomes unresponsive.
 * **Graceful Error Handling:** If a specific case fails to close, the script logs the error and safely continues processing the remaining cases.
 
+## Disclaimer
+
+Please test this script in a development or lab environment before running it in production. Bulk closing cases is a destructive action that cannot be easily undone. Ensure your case_name_match is specific enough that you do not accidentally close legitimate security incidents.
+
 ## Prerequisites
 
 * Python 3.6 or higher
@@ -26,8 +30,8 @@ api_key = "YOUR_API_KEY_HERE" # Your SOAR AppKey
 soar_hostname = "your-instance.siemplify-soar.com" # Your SOAR hostname (without https://)
 case_name_match = "SecOps Connector Health" # The exact string to search for in case titles
 
-python bulk_close_soar_cases.py
+python3 bulk_close_soar_cases.py
 
-## Disclaimer
+```
 
-Please test this script in a development or lab environment before running it in production. Bulk closing cases is a destructive action that cannot be easily undone. Ensure your case_name_match is specific enough that you do not accidentally close legitimate security incidents.
+
